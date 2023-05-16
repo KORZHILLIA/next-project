@@ -1,12 +1,16 @@
-import RootLayout from "@/components/RootLayout/RootLayout"
-// import { Inter } from 'next/font/google'
+import Hero from "@/components/Hero/hero";
+import Snickers from "@/components/Snickers";
+import { Inter } from 'next/font/google'
 
-// const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-      <main>
-      <p>Cool</p>
+    <main>
+      <div className="container mx-auto px-1">
+        <Hero />
+<Snickers />
+      </div>
     </main>
   )
 }

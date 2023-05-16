@@ -6,7 +6,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <Header />
+        <Header to1={'snickersContainer'} />
         <Main />
         <NextScript />
       </body>
