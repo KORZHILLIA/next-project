@@ -1,13 +1,52 @@
 import SliderItems from "./SliderItems/SliderItems";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider } from 'keen-slider/react';
 import snicker1 from '../../../public/images/snickers/snicker_1.jpg';
+import Image from "next/image";
 
 export default function Slider() { 
-    return <Carousel>
-        <div>
-            <img src='../../../public/images/snickers/snicker_1.jpg' />
-            <p></p>
-        </div>
-    </Carousel>
+    const [sliderRef, instanceRef] = useKeenSlider(
+        {
+            loop: true,
+            defaultAnimation: {
+                duration: 500,
+        },
+    },
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 2000)
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on("dragStarted", clearNextTimeout)
+        slider.on("animationEnded", nextTimeout)
+        slider.on("updated", nextTimeout)
+      },
+    ]
+  )
+
+  return (
+    <div ref={sliderRef} className="keen-slider" style={{height: '200px'}}>
+      <SliderItems />
+    </div>
+  )
 };

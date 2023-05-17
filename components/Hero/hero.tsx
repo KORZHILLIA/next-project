@@ -11,23 +11,18 @@ export default function Hero() {
             <div className="relative w-full h-80">
                 <Image fill style={{ objectFit: "cover", zIndex: -2}} priority src={hero} alt="Girl is jumping" />
         </div>
-        <p className="pl-1 indent-2.5">Sometimes, you need a little motivation to hit the gym or start a workout. A good outfit can do just that.
-            No matter the workout or goal, there's a cute Nike outfit to help you crush whatever you've got planned.
-            Activewear that doesn't hold up throughout a workout can be a dealbreaker and even get in the way of hitting optimal performance
-            — ever been mid-run and have a sock slip into your shoe? Ideally, your activewear can make it through a tough workout
-            while having you feeling your best. Check out these tips to find cute workout outfits for every type of workout.
-        </p>
-        <p className="pl-1 indent-2.5">Sometimes, you need a little motivation to hit the gym or start a workout. A good outfit can do just that.
-            No matter the workout or goal, there's a cute Nike outfit to help you crush whatever you've got planned.
-            Activewear that doesn't hold up throughout a workout can be a dealbreaker and even get in the way of hitting optimal performance
-            — ever been mid-run and have a sock slip into your shoe? Ideally, your activewear can make it through a tough workout
-            while having you feeling your best. Check out these tips to find cute workout outfits for every type of workout.
-        </p>
-        <p className="pl-1 indent-2.5">Sometimes, you need a little motivation to hit the gym or start a workout. A good outfit can do just that.
-            No matter the workout or goal, there's a cute Nike outfit to help you crush whatever you've got planned.
-            Activewear that doesn't hold up throughout a workout can be a dealbreaker and even get in the way of hitting optimal performance
-            — ever been mid-run and have a sock slip into your shoe? Ideally, your activewear can make it through a tough workout
-            while having you feeling your best. Check out these tips to find cute workout outfits for every type of workout.
-</p>
+            <p className="pl-1 indent-2.5">Ласкаво просимо в дисконт магазин «СпортТовари».
+                На сайті ви можете придбати одяг для занять спортом, активного відпочинку і повсякденного життя
+                від популярних світових брендів Puma, Reebok. Ми спеціалізований інтернет-магазином одягу Adidas, взуття New Balance, аксесуарів та інших товарів для спорту.
+                В каталозі представлено понад 5 000 товарів для спорту і щодня поповнюється новими колекціями adidas.
+                Це дозволяє запропонувати широкий вибір спортивних товарів, навіть для най вимогливiшого покупця.</p>
+            <p className="pl-1 indent-2.5">Сьогодні одяг для спорту високої якості купити не так просто.
+                Якщо ви не хочете стати жертвою шахрайства, вам сюди. Ми реалізуємо тільки
+                оригінальні колекції - Adidas, Reebok. Висока якість товару, за рахунок постійного вдосконалення технологій
+                виробництва дають Вам можливість максимально насолоджуватися зручністю, навіть дуже тривалій шкарпетці.</p>
+            <p className="pl-1 indent-2.5">Доставка по всій території України. Не важливо в якому населеному пункті Ви живете:
+                Сєвєродонецьк, Павлоград, Бровари, Бердянськ, Нікополь, Слов'янськ, Мелітополь, Краматорськ, Біла Церква, Кременчук,
+                Кам'янське, Кам'янець-Подільський, Лисичанськ, Олександрія, Костянтинівка, Алчевськ, Конотоп, Умань, Бердичів,
+                Бердичів, Шостка, Ізмаїл, - наш інтернет магазин доставить покупку зручним способом: кур'єр, новою поштою, самовивіз.</p>
         </section>)
  };

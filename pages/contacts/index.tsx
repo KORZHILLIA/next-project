@@ -1,7 +1,10 @@
-import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form";
+import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
+import Button from '@/shared/components/Button/Button';
+import arrowLeft from '../../public/images/svg/arrow-left.svg';
 
 type Inputs = {
   name: string,
@@ -11,8 +14,6 @@ type Inputs = {
 };
 
 export default function Contacts() { 
-    const router = useRouter();
-  console.log(router);
     const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful  } } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
@@ -32,7 +33,12 @@ export default function Contacts() {
     return (
     <>
         <Header />
-    <main>
+            <main>
+                <div className="container mx-auto px-1">
+                    <Link href="/" className='max-w-[35%] mb-2 p-1 border border-zinc-300 rounded-md flex items-center gap-1 hover:bg-slate-200 transition-all'>
+                        <Image src={arrowLeft} alt="Arrow left" width={16} height={16} />
+                            <span className='text-sm'>На головну</span>
+                            </Link>
         <h1 className='mb-3 text-2xl text-center'>Залишіть ваші контакти:</h1>
         <form className="w-[80%] mx-auto p-3 flex flex-col gap-5 border-2 border-zinc-300 rounded-md" onSubmit={handleSubmit(onSubmit)}>
             <label className="relative flex flex-col gap-1">
@@ -57,8 +63,9 @@ export default function Contacts() {
                     <span className='leading-none'>Погоджуюсь з умовами</span>
                 {errors.isAgree && <span className="absolute -bottom-4 left-9 text-xs font-medium text-red-600">Будь ласка, дайте згоду</span>}
             </label>
-      <button className='mt-6 p-2 flex justify-center items-center border border-zinc-400 rounded-md bg-slate-100 hover:bg-slate-200 transition-all' type="submit">Відправити</button>
-    </form>
+                    <Button type='submit' text='Відправити' style='mt-6 bg-slate-100 hover:bg-slate-200 transition-all' />
+                    </form>
+                    </div>
         </main>
         </>);
 };

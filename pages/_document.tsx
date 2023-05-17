@@ -8,8 +8,6 @@ export default function Document({children}: {children: React.ReactNode}) {
       <Head />
       <body>
         {children}
-        {/* <Header to1={'snickersContainer'} /> */}
-        {/* <Main /> */}
         <NextScript />
       </body>
     </Html>
