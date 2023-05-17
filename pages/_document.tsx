@@ -1,13 +1,15 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import Header from '@/components/Header/Header';
+import Header from '@/components/Header';
 
-export default function Document() {
+export default function Document({children}: {children: React.ReactNode}) {
+  
   return (
     <Html lang="en">
       <Head />
       <body>
-        <Header to1={'snickersContainer'} />
-        <Main />
+        {children}
+        {/* <Header to1={'snickersContainer'} /> */}
+        {/* <Main /> */}
         <NextScript />
       </body>
     </Html>

@@ -17,5 +17,10 @@
 }
 
 body {
+  padding-top: 70px;
+  padding-bottom: 15px;
   color: rgb(var(--foreground-rgb));
+  background-image: url("../public/images/bg/bg-main.jpg");
+  background-repeat: repeat;
+  /* color: #6eaeef; */
 }
