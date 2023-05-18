@@ -7,7 +7,7 @@ import hero from '../../public/images/hero/hero.webp';
 
 export default function Hero() {
     const { bigger1280px } = useBreakpoints();
-    
+
     return (
         <section className="pt-8">
         <Element name="hero">
