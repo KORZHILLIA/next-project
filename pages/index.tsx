@@ -11,10 +11,10 @@ export default function Home() {
       <Header home />
     <main>
       <div className="container mx-auto px-1">
-        <Hero />
-<Snickers />
-      </div>
-      </main>
+       <Hero />
+       <Snickers />
+     </div>
+    </main>
       </>
   )
 }

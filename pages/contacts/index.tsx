@@ -8,7 +8,6 @@ import Image from 'next/image';
 import Header from '@/shared/components/Header/header';
 import Button from '@/shared/components/Button/Button';
 import arrowLeft from '../../public/images/svg/arrow-left.svg';
-import { POSITION } from 'react-toastify/dist/utils';
 
 type Inputs = {
   name: string,
@@ -30,8 +29,6 @@ export default function Contacts() {
     useEffect(() => { 
         if (isSubmitSuccessful) {
             reset();
-            // notify();
-
         }
     }, [reset, isSubmitSuccessful]);
 

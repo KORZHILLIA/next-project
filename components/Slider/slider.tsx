@@ -1,4 +1,3 @@
-// import SliderItems from "./SliderItems/SliderItems";
 import SliderItems from '@/shared/components/SliderItems/sliderItems';
 import snickersArr from '@/helpers/snickers-array';
 import {keenSliderOptions, handleSlides } from '../../helpers/keen-slider';

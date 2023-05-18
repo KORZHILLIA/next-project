@@ -6,6 +6,15 @@ export const keenSliderOptions = {
     defaultAnimation: {
         duration: 500,
     },
+    slides: { perView: 1 },
+    breakpoints: {
+      "(min-width: 600px)": {
+        slides: { perView: 2, spacing: 5 },
+      },
+      "(min-width: 1000px)": {
+        slides: { perView: 3, spacing: 10 },
+      },
+    },
     selector: '.sliders',
 };
 
