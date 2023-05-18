@@ -1,10 +1,13 @@
 import { Element } from "react-scroll";
+
 import Image from "next/image";
+
 import useBreakpoints from "@/shared/hooks/useBreakpoints";
 import hero from '../../public/images/hero/hero.webp';
 
 export default function Hero() {
     const { bigger1280px } = useBreakpoints();
+    
     return (
         <section className="pt-8">
         <Element name="hero">

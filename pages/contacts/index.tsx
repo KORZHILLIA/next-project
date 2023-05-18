@@ -1,13 +1,17 @@
 import { useEffect } from 'react';
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast, ToastContainer } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
-import useBreakpoints from '@/shared/hooks/useBreakpoints';
+
+import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+
 import Header from '@/shared/components/Header/header';
-import Button from '@/shared/components/Button/Button';
+import Button from '../../shared/components/Button/Button';
+
+import useBreakpoints from '@/shared/hooks/useBreakpoints';
 import arrowLeft from '../../public/images/svg/arrow-left.svg';
+import "react-toastify/dist/ReactToastify.css";
 
 type Inputs = {
   name: string,
@@ -17,7 +21,7 @@ type Inputs = {
 };
 
 export default function Contacts() { 
-    const notify = (name: string) => toast.success(`Дякуємо, ${name} ваші данні прийняті!`, { position: toast.POSITION.TOP_CENTER });
+    const notify = (name: string) => toast.success(`Дякуємо, ${name}, ваші данні прийняті!`, { position: toast.POSITION.TOP_CENTER });
     
     const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm<Inputs>({ defaultValues: { isAgree: false } });
     
@@ -33,7 +37,12 @@ export default function Contacts() {
     }, [reset, isSubmitSuccessful]);
 
     return (
-    <>
+        <>
+            <Head>
+        <title>СпортТовари</title>
+                <meta property='og:title' content='СпортТовари' key='title' />
+                <meta name="description" content="Сайт, присвячений спортивним товарам" />
+      </Head>
         <Header />
             <main>
                 <div className="container mx-auto px-1">

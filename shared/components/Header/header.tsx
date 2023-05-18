@@ -1,10 +1,13 @@
-import { Link as RSLink, animateScroll as scroll} from 'react-scroll';
+import { Link as RSLink, animateScroll as scroll } from 'react-scroll';
+
 import Link from "next/link";
 import Image from "next/image";
+
+import useBreakpoints from '../../hooks/useBreakpoints';
+
 import logo from '../../../public/images/svg/logo.svg';
 import hero from '../../../public/images/svg/hero.svg';
 import goods from '../../../public/images/svg/goods.svg';
-import useBreakpoints from '../../hooks/useBreakpoints';
 
 export default function Header({ home }: { home?: boolean }) {
     const { less768px } = useBreakpoints();
@@ -25,6 +28,6 @@ export default function Header({ home }: { home?: boolean }) {
                         <span className={`block ${!less768px && 'p-2'} md:shadow-sm md:hover:shadow-md transition-all text-xs md:text-xl`}>{less768px ? "Товари" : "Найпопулярніші товари"}</span>
                     </div>
                 </RSLink>
-        </nav>}
+            </nav>}
     </header>);
 }

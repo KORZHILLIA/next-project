@@ -1,6 +1,8 @@
-import Link from "next/link";
 import { Element } from "react-scroll";
+
+import Link from "next/link";
 import Slider from "../Slider/slider";
+
 export default function Snickers() { 
     return <section className="mt-4" >
         <Element name="snickersContainer">

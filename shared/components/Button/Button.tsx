@@ -1,5 +1,3 @@
-import { type } from "os";
-
 type ButtonProps = {
     type: 'button' | 'submit' | 'reset',
     text: string,
