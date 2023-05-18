@@ -1,9 +1,9 @@
-import Header from "@/components/Header";
+import Header from "@/shared/components/Header/header";
 import Hero from "@/components/Hero/hero";
 import Snickers from "@/components/Snickers";
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import Header from '@/components/Header';
+import Header from '@/shared/components/Header/header';
 
 export default function Document({children}: {children: React.ReactNode}) {
   
