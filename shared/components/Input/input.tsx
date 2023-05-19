@@ -1,7 +1,7 @@
 import { FieldErrors} from "react-hook-form";
 
 type InputProps = {
-    type: string,
+    type: 'text' | 'tel' | 'email' | 'number' | 'checkbox' | 'radio' | 'submit',
     name: string,
     inputStyles?: string,
     errorStyles?: string,
