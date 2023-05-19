@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Header from '@/shared/components/Header/header';
-import Button from '../../shared/components/Button/Button';
+import Button from '../../shared/components/Button/button';
 
 import useBreakpoints from '@/shared/hooks/useBreakpoints';
 import arrowLeft from '../../public/images/svg/arrow-left.svg';
@@ -46,6 +46,7 @@ export default function Contacts() {
         <Header />
             <main>
                 <div className="container mx-auto px-1">
+                    <section className='text-black'>
                     <Link href="/" className='max-w-[160px] mb-2 p-1 border border-zinc-300 rounded-md flex justify-center items-center gap-1 hover:bg-slate-200 transition-all'>
                         <Image src={arrowLeft} alt="Arrow left" width={less768px ? 16 : 20} height={less768px ? 16 : 20} />
                             <span className='text-sm md:text-base'>На головну</span>
@@ -75,7 +76,8 @@ export default function Contacts() {
                 {errors.isAgree && <span className="absolute -bottom-4 left-9 text-xs font-medium text-red-600">Будь ласка, дайте згоду</span>}
                         </label>
                     <Button type='submit' text='Відправити' styles='w-[80%] mx-auto mt-6 bg-slate-100 hover:bg-slate-200 transition-all sm:text-xl' />
-                    </form>
+                        </form>
+                        </section>
                 </div>
                 <ToastContainer autoClose={2000 } />
         </main>

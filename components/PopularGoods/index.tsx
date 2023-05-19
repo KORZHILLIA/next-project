@@ -3,9 +3,9 @@ import { Element } from "react-scroll";
 import Link from "next/link";
 import Slider from "../Slider/slider";
 
-export default function Snickers() { 
-    return <section className="mt-4" >
-        <Element name="snickersContainer">
+export default function PopularGoods() { 
+    return <section className="mt-4 text-black" >
+        <Element name="popularGoods">
            <h2 className="mb-4 text-2xl md:text-4xl text-center">Наші найпопулярніші товари</h2>
         </Element>
         <Slider />
