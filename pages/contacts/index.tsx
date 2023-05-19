@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Header from '@/shared/components/Header/header';
-import Button from '@/shared/components/Button/button';
+import Button from '../../shared/components/Button/Button';
 import Input from '@/shared/components/Input/input';
 
 import useBreakpoints from '@/shared/hooks/useBreakpoints';
