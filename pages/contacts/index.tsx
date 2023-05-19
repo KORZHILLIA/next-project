@@ -86,7 +86,7 @@ export default function Contacts() {
                                 />
                     <span className='sm:text-xl leading-none'>Погоджуюсь з умовами</span>
                         </label>
-                    <Button type='submit' text='Відправити' styles='w-[80%] mx-auto mt-6 bg-slate-100 hover:bg-slate-200 transition-all sm:text-xl' />
+                    <Button type='submit' text='Відправляю' styles='w-[80%] mx-auto mt-6 bg-slate-100 hover:bg-slate-200 transition-all sm:text-xl' />
                             </form>
                         </section>
                 </div>
