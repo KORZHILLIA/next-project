@@ -12,7 +12,8 @@ import goods from '../../../public/images/svg/goods.svg';
 export default function Header({ home }: { home?: boolean }) {
     const { less768px } = useBreakpoints();
     const scrollToTop = () => scroll.scrollToTop();
-    return (<header className={`fixed w-full min-h-[48px] top-0 left-0 p-1 sm:p-2 flex ${home ? 'justify-between' : 'justify-center'} items-center text-black bg-slate-300 shadow-xl z-20`}>
+    return (<header className={`fixed w-full min-h-[48px] top-0 left-0 bg-slate-300 shadow-xl z-20`}>
+        <div className={`p-1 sm:p-2 flex ${home ? 'justify-between' : 'justify-center'} items-center text-black`}>
         <Link className={`flex ${home && 'flex-col'} ${!home && 'gap-4'} items-center`} href="/">
             <Image priority src={logo} alt="Logo" width={less768px ? 30 : 36} height={less768px ? 30 : 36} />
             <span className="text-xs md:text-xl">СпортТовари</span>
@@ -29,5 +30,6 @@ export default function Header({ home }: { home?: boolean }) {
                     </div>
                 </RSLink>
             </nav>}
+            </div>
     </header>);
 }
