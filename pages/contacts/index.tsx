@@ -56,37 +56,52 @@ export default function Contacts() {
         <form className="max-w-[400px] mx-auto p-3 flex flex-col gap-5 border-2 border-zinc-300 rounded-md" onSubmit={handleSubmit(onSubmit)}>
             <label className="relative flex flex-col gap-1">
                                     <p className='sm:text-xl'>Ім'я</p>
-                                <Input type='text' name='name' register={register} options={{ required: true }}  errors={errors}  
+                                <Input type='text' name='name' register={register} options={{ required: "Обов'язкове поле" }}  errors={errors}  
                                     inputStyles={`p-1 border focus:outline-none text-sm rounded`}
                                     errorStyles='absolute -bottom-4 left-0 text-xs font-medium text-red-600'
-                                    errorMessage="Обов'язкове поле"
+                                    errorMessage={errors.name?.message}
                                 />
       </label>
       
             <label className="relative flex flex-col gap-1">
                                 <p className='sm:text-xl'>Телефон</p>
-                                <Input type='tel' name='phone' register={register} options={{ required: true }} errors={errors}
-                                inputStyles={`p-1 border focus:outline-none text-sm rounded`}
+                                <Input type='tel' name='phone' register={register} options={{
+                                    validate: {
+                                        noValue: (value: string) => value !== '' || "Обов'язкове поле",
+                                        longValue: (value: string) => value.length <= 13 || 'Зупиніться, максимум 13 символів',
+                                        testValue: (value: string) => {
+                                            const phoneRegexp = /\+380\d{9}/;
+                                            return phoneRegexp.test(value) || 'Будь ласка, дотримуйтесь формату +380XXXXXXXXX';
+                                        }
+                                    }
+                                }} errors={errors}
+                                    inputStyles={`p-1 border focus:outline-none text-sm rounded`}
                                     errorStyles='absolute -bottom-4 left-0 text-xs font-medium text-red-600'
-                                    errorMessage="Обов'язкове поле"
+                                    errorMessage={ errors.phone?.message}
                                 />
       </label>
             <label className="relative flex flex-col gap-1">
                                 <p className='sm:text-xl'>Електронна пошта</p>
-                                <Input type='email' name='email' register={register} options={{ required: true }} errors={errors}
-                                inputStyles={`p-1 border focus:outline-none text-sm rounded`}
+                                <Input type='email' name='email' register={register} options={{ validate: {
+                                        noValue: (value: string) => value !== '' || "Обов'язкове поле",
+                                        testValue: (value: string) => {
+                                            const emailRegexp = /^\S+@\S+\.\S+$/;
+                                            return emailRegexp.test(value) || 'Будь ласка, дотримуйтесь формату ел. пошти';
+                                        }
+                                    } }} errors={errors}
+                                    inputStyles={`p-1 border focus:outline-none text-sm rounded`}
                                     errorStyles='absolute -bottom-4 left-0 text-xs font-medium text-red-600'
-                                    errorMessage="Обов'язкове поле"
+                                    errorMessage={ errors.email?.message}
                                 />
             </label>
                             <label className="relative flex justify-center items-center gap-1">
-                                <Input type='checkbox' name='isAgree' register={register} options={{ validate: (value: boolean) => value || 'error message' }}
+                                <Input type='checkbox' name='isAgree' register={register} options={{ validate: (value: boolean) => value || 'Будь ласка, погодьтеся з умовами' }}
                                     errors={errors} errorStyles='absolute -bottom-4 left-16 text-xs font-medium text-red-600'
-                                    errorMessage='Будь ласка, дайте згоду'
+                                    errorMessage={errors.isAgree?.message}
                                 />
                     <span className='sm:text-xl leading-none'>Погоджуюсь з умовами</span>
                         </label>
-                    <Button type='submit' text='Відправляю' styles='w-[80%] mx-auto mt-6 bg-slate-100 hover:bg-slate-200 transition-all sm:text-xl' />
+                    <Button type='submit' text='Відправити' styles='w-[80%] mx-auto mt-6 bg-slate-100 hover:bg-slate-200 transition-all sm:text-xl' />
                             </form>
                         </section>
                 </div>
