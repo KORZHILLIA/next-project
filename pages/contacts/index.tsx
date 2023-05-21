@@ -61,11 +61,11 @@ export default function Contacts() {
                             <ThemeSwitcher />
                         </div>
                         <h1 className='mb-6 text-2xl md:text-4xl text-center'>Залишіть ваші контакти:</h1>
-                        <form className={`max-w-[400px] mx-auto p-3 flex flex-col gap-5 border-2 border-${isDark ? 'zinc-300' : 'zinc-600'} rounded-md`} onSubmit={handleSubmit(onSubmit)}>
+                        <form className={`max-w-[400px] mx-auto p-3 flex flex-col gap-5 border-2 border-${isDark ? 'zinc-300' : 'zinc-600'} text-black rounded-md`} onSubmit={handleSubmit(onSubmit)}>
                             <label className="relative flex flex-col gap-1">
                                 <p className='sm:text-xl'>Ім'я</p>
                                 <Input type='text' name='name' register={register} options={{ required: "Обов'язкове поле" }}  errors={errors}  
-                                    inputStyles={`p-1 border focus:outline-none text-sm rounded`}
+                                    inputStyles={`p-1 border ${isDark ? 'bg-slate-400' : 'bg-slate-200'} focus:outline-none text-sm rounded`}
                                     errorStyles='absolute -bottom-4 left-0 text-xs font-medium text-red-600'
                                     errorMessage={errors.name?.message}
                                 />
@@ -82,7 +82,7 @@ export default function Contacts() {
                                         }
                                     }
                                 }} errors={errors}
-                                    inputStyles={`p-1 border focus:outline-none text-sm rounded`}
+                                    inputStyles={`p-1 border ${isDark ? 'bg-slate-400' : 'bg-slate-200'} focus:outline-none text-sm rounded`}
                                     errorStyles='absolute -bottom-4 left-0 text-xs font-medium text-red-600'
                                     errorMessage={ errors.phone?.message}
                                 />
@@ -96,7 +96,7 @@ export default function Contacts() {
                                             return emailRegexp.test(value) || 'Будь ласка, дотримуйтесь формату ел. пошти';
                                         }
                                     } }} errors={errors}
-                                    inputStyles={`p-1 border focus:outline-none text-sm rounded`}
+                                    inputStyles={`p-1 border ${isDark ? 'bg-slate-400' : 'bg-slate-200'} focus:outline-none text-sm rounded`}
                                     errorStyles='absolute -bottom-4 left-0 text-xs font-medium text-red-600'
                                     errorMessage={ errors.email?.message}
                                 />
