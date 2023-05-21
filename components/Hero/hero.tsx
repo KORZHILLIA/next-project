@@ -2,6 +2,8 @@ import { Element } from "react-scroll";
 
 import Image from "next/image";
 
+import ThemeSwitcher from "@/shared/components/ThemeSwitcher/themeSwitcher";
+
 import useBreakpoints from "@/shared/hooks/useBreakpoints";
 import hero from '../../public/images/hero/hero.webp';
 
@@ -9,12 +11,15 @@ export default function Hero() {
     const { bigger1280px } = useBreakpoints();
 
     return (
-        <section className="pt-8 text-black">
+        <section className="pt-6 md:pt-10">
+            <div className="flex justify-end">
+                <ThemeSwitcher />
+            </div>
         <Element name="hero">
-            {!bigger1280px && <h1 className="text-4xl md:text-6xl mb-1 md:mb-3 text-center">Знайди свій стиль!</h1>}
+            {!bigger1280px && <h1 className="pt-2 text-4xl md:text-6xl mb-1 md:mb-3 text-center">Знайди свій стиль!</h1>}
             </Element>
-            <div className="relative w-full h-96 md:h-[600px] mx-auto mb-2 pointer-events-none ">
-                <Image className="object-cover -z-20" priority src={hero} alt="Girl is jumping" fill />
+            <div className={`relative w-full h-96 md:h-[600px] mx-auto mb-2 ${bigger1280px && 'mt-2'} pointer-events-none`}>
+                <Image className="object-cover" priority src={hero} alt="Girl is jumping" fill />
                 {bigger1280px && <h1 className="absolute top-[calc(50%-30px)] left-[50%] translate-x-[-50%] text-7xl text-sky-600">Знайди <span className="text-yellow-200">свій </span>стиль!</h1>}
         </div>
             <p className="pl-1 indent-2.5 md:text-xl">Ласкаво просимо в дисконт магазин «СпортТовари».

@@ -17,9 +17,8 @@
 }
 
 body {
-  padding-top: 70px;
-  padding-bottom: 15px;
+  padding-top: 54px;
   color: rgb(var(--foreground-rgb));
-  background-image: url("../public/images/bg/bg-main.jpg");
+  /* background-image: url("../public/images/bg/bg-main-light.jpg"); */
   background-repeat: repeat;
 }
