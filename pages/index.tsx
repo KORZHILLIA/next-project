@@ -3,13 +3,10 @@ import { useContext } from "react";
 import Head from "next/head";
 
 import Header from "@/shared/components/Header/header";
-import Hero from "@/components/Hero/hero";
-import PopularGoods from "@/components/PopularGoods";
-import { ThemeContext, ThemeContextType } from "@/context/themeContext";
-
-// import { Inter } from 'next/font/google'
-
-// const inter = Inter({ subsets: ['latin'] })
+import Hero from "@/Sections/Hero/hero";
+import PopularGoods from "../Sections/PopularGoods/popularGoods";
+import { ThemeContext } from "@/context/themeContext";
+import { ThemeContextType } from '@/context/themeContext.type';
 
 export default function Home() {
   const { isDark } = useContext(ThemeContext) as ThemeContextType;
@@ -22,10 +19,8 @@ export default function Home() {
       </Head>
       <Header home />
       <main className={`${isDark ? 'text-white bg-slate-600' : 'text-black bg-slate-300'}`}>
-      <div className="container mx-auto px-1">
        <Hero />
        <PopularGoods />
-     </div>
     </main>
       </>
   )

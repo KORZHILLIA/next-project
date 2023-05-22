@@ -6,7 +6,8 @@ import Head from "next/head";
 import Header from "@/shared/components/Header/header";
 import Button from "@/shared/components/Button/Button";
 
-import { ThemeContext, ThemeContextType } from "@/context/themeContext";
+import { ThemeContext } from "@/context/themeContext";
+import { ThemeContextType } from "@/context/themeContext.type";
 
 
 export default function Page404() {
