@@ -11,7 +11,7 @@ export default function Hero() {
     const { bigger1280px } = useBreakpoints();
 
     return (
-        <section className="pt-20 md:pt-32">
+        <section className="pt-20 md:pt-24">
             <div className="container mx-auto px-4">
         <Element name="hero">
             {!bigger1280px && <h1 className="pt-2 text-4xl md:text-6xl mb-1 md:mb-3 text-center">Знайди свій стиль!</h1>}
