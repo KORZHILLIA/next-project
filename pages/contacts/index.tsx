@@ -1,6 +1,5 @@
-import { useEffect, useContext } from 'react';
-import { useForm, SubmitHandler } from "react-hook-form";
-import { toast, ToastContainer } from 'react-toastify';
+import {useContext } from 'react';
+import {ToastContainer } from 'react-toastify';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -9,20 +8,11 @@ import Image from 'next/image';
 import ContactForm from '@/components/ContactForm/contactForm';
 import ThemeSwitcher from '@/shared/components/ThemeSwitcher/themeSwitcher';
 import Header from '@/shared/components/Header/header';
-import Button from '../../shared/components/Button/Button';
-// import Input from '@/shared/components/Input/input';
 
 import { ThemeContext, ThemeContextType } from '@/context/themeContext';
 import useBreakpoints from '@/shared/hooks/useBreakpoints';
 import arrowLeft from '../../public/images/svg/arrow-left.svg';
 import "react-toastify/dist/ReactToastify.css";
-
-type Inputs = {
-  name: string,
-    phone: string,
-    email: string,
-  isAgree: boolean,
-};
 
 export default function Contacts() { 
     const { less768px } = useBreakpoints();
