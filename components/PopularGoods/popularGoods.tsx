@@ -11,7 +11,7 @@ export default function PopularGoods() {
     const { isDark } = useContext(ThemeContext) as ThemeContextType;
     
     return <section className="py-4" >
-        <div className='container mx-auto px-1'>
+        <div className='container mx-auto px-4'>
         <Element name="popularGoods">
            <h2 className="mb-4 text-2xl md:text-4xl text-center">Наші найпопулярніші товари</h2>
         </Element>

@@ -26,7 +26,7 @@ export default function Header({ home }: { home?: boolean }) {
             <span className="text-xs md:text-xl">СпортТовари</span>
         </Link>
         {home && <nav className="ml-auto mr-4">
-                <ul className="flex items-center gap-10">
+                <ul className="flex items-center gap-6">
                     <li onClick={scrollToTop} className={navLiStyle}>
                     {less768px && <Image src={hero} alt="Знайди свій стиль!" width={24} height={24} />}
                     <span className={`block ${!less768px && 'p-2'} md:shadow-sm md:hover:shadow-md transition-all text-xs md:text-xl`}>{less768px ? "Стиль" : 'Знайди свій стиль!'}</span>
