@@ -14,7 +14,7 @@ export default function Slider() {
   )
 
   return (
-    <ul ref={sliderRef} className="keen-slider h-[300px]">
+    <ul ref={sliderRef} className="keen-slider h-[300px] pb-4">
       <SliderItems images={snickersArr} alt='Snicker'/>
     </ul>
   )
