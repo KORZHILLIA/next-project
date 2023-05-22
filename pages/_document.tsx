@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document({children}: {children: React.ReactNode}) {  
   return (
-    <Html lang="en">
+    <Html lang="uk">
       <Head/>
       <body>
         <Main />
