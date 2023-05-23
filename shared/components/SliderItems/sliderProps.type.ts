@@ -1,6 +1,9 @@
 import { StaticImageData } from "next/image";
+type Slider = {
+    imgSource: StaticImageData,
+    imgDescription: string,
+};
 
 export type SliderProps = {
-    images: StaticImageData[],
-    alt: string,
+    images: Slider[],
 };

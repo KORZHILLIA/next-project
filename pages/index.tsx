@@ -3,8 +3,8 @@ import { useContext } from "react";
 import Head from "next/head";
 
 import Header from "@/shared/components/Header/header";
-import Hero from "../components/Hero/hero";
-import PopularGoods from "../components/PopularGoods/popularGoods";
+import Hero from "../sections/Hero/hero";
+import PopularGoods from "../sections/PopularGoods/popularGoods";
 import { ThemeContext } from "@/context/themeContext";
 import { ThemeContextType } from '@/context/themeContext.type';
 
