@@ -6,4 +6,5 @@ type Slider = {
 
 export type SliderProps = {
     images: Slider[],
+    onSliderClick: Function,
 };

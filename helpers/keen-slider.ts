@@ -1,4 +1,4 @@
-import { KeenSliderHooks, KeenSliderInstance, KeenSliderOptions, SliderInstance, useKeenSlider } from 'keen-slider/react';
+import { KeenSliderHooks, KeenSliderInstance, KeenSliderOptions, SliderInstance } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
 export const keenSliderOptions = {
@@ -27,8 +27,8 @@ export const handleSlides = [
             clearTimeout(timeout)
         }
         function nextTimeout() {
-            clearTimeout(timeout)
-            if (mouseOver) return
+            clearTimeout(timeout);
+            if (mouseOver) return;
             timeout = setTimeout(() => {
                 slider.next()
             }, 2000)
@@ -42,7 +42,7 @@ export const handleSlides = [
                 mouseOver = false
                 nextTimeout()
             })
-            nextTimeout()
+            nextTimeout();
         })
         slider.on("dragStarted", clearNextTimeout)
         slider.on("animationEnded", nextTimeout)
