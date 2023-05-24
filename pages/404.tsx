@@ -23,7 +23,7 @@ export default function Page404() {
             </Head>
             <Header />
             <main className={`w-full h-screen ${isDark ? 'bg-slate-600' : 'bg-slate-200'}`}>
-                <h1 className={`text-center text-4xl md:text-6xl mb-4 pt-[calc(50vh-54px)] ${isDark ? 'text-white' : 'text-black'}`}>Page Not Found</h1>
+                <h1 className={`text-center text-4xl md:text-6xl mb-4 pt-[calc(50vh-54px)] ${isDark ? 'text-white' : 'text-black'}`}>Сторінку не знайдено</h1>
                 <Button onBtnClick={() => router.back()} type="button" text="Повернутися" styles={`block max-w-[200px] mx-auto p-2 bg-sky-600 text-center text-2xl`} />
         </main>
         </>

@@ -24,12 +24,12 @@ export default function Slider() {
     [...handleSlides]
   );
 
-  const {less768px} = useBreakpoints();
-  const initialState: SliderState = { isModalOpen: false, currentImg: {source: 'null', description: 'null'} };
+  const {less768px, bigger1280px} = useBreakpoints();
+  const initialState: SliderState = { isModalOpen: false, currentImg: {source: 'null', description: 'null', price: 0} };
   const [state, setState] = useState(initialState);
 
-  const openModal = (img: StaticImageData, desc: string) => {
-    setState({isModalOpen: true, currentImg: {source: img, description: desc}});
+  const openModal = (img: StaticImageData, desc: string, price: number) => {
+    setState({isModalOpen: true, currentImg: {source: img, description: desc, price}});
   };
 
   const closeModal = () => {
@@ -37,15 +37,16 @@ export default function Slider() {
   };
 
   const { isModalOpen, currentImg } = state;
-  const { source, description } = currentImg;
+  const { source, description, price } = currentImg;
 
   return (<>
     <ul ref={sliderRef} className="keen-slider h-[300px] pb-4">
       <SliderItems images={snickersArr} onSliderClick={openModal} />
     </ul>
     <Modal isOpen={isModalOpen} onRequestClose={closeModal} contentLabel={description} style={sliderModalStyle}>
-      <h2 className={`mb-2 ${less768px ? 'text-xl' : 'text-4xl'} text-center text-white`}>{ description}</h2>
-      <Image className='mx-auto mb-2' src={source} alt={description} width={less768px ? 240 : 360} height={less768px ? 240 : 360} />
+      <h2 className={`mb-1 ${less768px ? 'text-xl' : 'text-4xl'} text-center text-white`}>{description}</h2>
+      <p className={`mb-2 ${less768px ? 'text-lg' : 'text-2xl'} text-center text-white`}>Ціна: <span className='text-yellow-300'>{price}</span> грн.</p>
+      <Image className='mx-auto mb-2' src={source} alt={description} width={less768px ? 280 : (bigger1280px ? 420 : 360)} height={less768px ? 280 : (bigger1280px ? 420 : 360)} />
       <Link href='/contacts' className='flex justify-center items-center max-w-[200px] p-2 mx-auto border text-2xl md:text-4xl text-white bg-slate-500 hover:bg-slate-400'>Замовити</Link>
       <Image className='absolute top-1 right-1 cursor-pointer' onClick={closeModal} src={cross} alt='Close Button' width={less768px ? 16 : 20} height={less768px ? 16 : 20} />
     </Modal>

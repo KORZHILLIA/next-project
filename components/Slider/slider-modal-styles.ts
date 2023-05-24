@@ -13,7 +13,7 @@ export const sliderModalStyle = {
     right: 'auto',
     bottom: 'auto',
       marginRight: '-50%',
-    padding: '20px',
+    padding: '20px 10px',
       transform: 'translate(-50%, -50%)',
     backgroundColor: 'rgba(100, 116, 139, 1)'
   },

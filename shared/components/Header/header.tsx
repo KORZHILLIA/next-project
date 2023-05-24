@@ -20,7 +20,7 @@ export default function Header({ home }: { home?: boolean }) {
     const {isDark} = useContext(ThemeContext) as ThemeContextType;
     const scrollToTop = () => scroll.scrollToTop();
     return (<header className={`fixed w-full flex items-center min-h-[54px] top-0 left-0 ${isDark ? 'bg-slate-500' : 'bg-slate-300 shadow-xl'} z-20`}>
-        <div className={`container mx-auto w-full p-2 lg:px-32 flex justify-between items-center text-black`}>
+        <div className='container mx-auto w-full p-2 lg:px-32 flex justify-between items-center text-black'>
         <Link className={`flex ${home && 'flex-col'} ${!home && 'gap-4'} items-center`} href="/">
             <Image priority src={logo} alt="Logo" width={less768px ? 30 : 36} height={less768px ? 30 : 36} />
             <span className="text-xs md:text-xl">СпортТовари</span>
@@ -32,7 +32,7 @@ export default function Header({ home }: { home?: boolean }) {
                     <span className={`block ${!less768px && 'p-2'} md:shadow-sm md:hover:shadow-md transition-all text-xs md:text-xl`}>{less768px ? "Стиль" : 'Знайди свій стиль!'}</span>
                     </li>
                     <li>
-                <RSLink to='popularGoods' smooth={true} duration={1700}>
+                <RSLink to='popularGoods' offset={-60} smooth={true} duration={1700}>
                     <div className={navLiStyle}>
                         {less768px && <Image src={goods} alt="Наші найпопулярніші товари" width={24} height={24} />}
                         <span className={`block ${!less768px && 'p-2'} md:shadow-sm md:hover:shadow-md transition-all text-xs md:text-xl`}>{less768px ? "Товари" : "Найпопулярніші товари"}</span>

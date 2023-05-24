@@ -5,6 +5,7 @@ import Head from "next/head";
 import Header from "@/shared/components/Header/header";
 import Hero from "../sections/Hero/hero";
 import PopularGoods from "../sections/PopularGoods/popularGoods";
+import Footer from "@/shared/components/Footer/footer";
 import { ThemeContext } from "@/context/themeContext";
 import { ThemeContextType } from '@/context/themeContext.type';
 
@@ -21,7 +22,8 @@ export default function Home() {
       <main className={`${isDark ? 'text-white bg-slate-600' : 'text-black bg-slate-300'}`}>
        <Hero />
        <PopularGoods />
-    </main>
+      </main>
+      <Footer />
       </>
   )
 }

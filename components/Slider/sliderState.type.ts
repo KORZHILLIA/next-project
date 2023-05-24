@@ -5,5 +5,6 @@ export type SliderState = {
   currentImg: {
     source: StaticImageData | string,
     description: string,
+    price: number,
   },
 }

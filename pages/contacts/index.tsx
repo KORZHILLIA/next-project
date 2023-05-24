@@ -31,8 +31,8 @@ export default function Contacts() {
             <main className={`${isDark ? 'text-white bg-slate-600' : 'text-black bg-slate-300'} h-screen`}>
                 <div className="container mx-auto px-4 lg:px-32">
                     <section className='pt-20 pb-2'>
-                        <div className='flex justify-between'>
-                            <Link href="/" className={`max-w-[160px] mb-2 p-1 border-2 border-${isDark ? 'zinc-300' : 'zinc-600'} rounded-md flex justify-center items-center gap-1 ${isDark ? 'hover:bg-slate-500' : 'hover:bg-slate-200'} transition-all`}>
+                        <div className='mb-2 flex justify-between'>
+                            <Link href="/" className={`max-w-[160px] p-1 border-2 border-${isDark ? 'zinc-300' : 'zinc-600'} rounded-md flex justify-center items-center gap-1 ${isDark ? 'hover:bg-slate-500' : 'hover:bg-slate-200'} transition-all`}>
                                 <Image src={arrowLeft} alt="Arrow left" width={less768px ? 16 : 20} height={less768px ? 16 : 20} />
                                 <span className='text-sm md:text-base'>На головну</span>
                             </Link>
