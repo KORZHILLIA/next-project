@@ -1,5 +1,5 @@
 import snicker1 from '../public/images/snickers/snicker_1.webp';
-import snicker2 from '../public/images/snickers/snicker_2.webp';
+import snicker2 from '../public/images/snickers/snicker_2.jpg';
 import snicker3 from '../public/images/snickers/snicker_3.jpg';
 import snicker4 from '../public/images/snickers/snicker_4.webp';
 import snicker5 from '../public/images/snickers/snicker_5.webp';
@@ -17,8 +17,8 @@ const snickersArr = [
 },
 {
     imgSource: snicker2,
-imgDescription: 'Гантелі чорні',
-price: 1780,
+imgDescription: 'Набір для бадмінтону',
+price: 810,
 },
 {
     imgSource: snicker3,

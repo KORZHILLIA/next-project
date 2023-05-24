@@ -46,7 +46,7 @@ export default function Slider() {
     <Modal isOpen={isModalOpen} onRequestClose={closeModal} contentLabel={description} style={sliderModalStyle}>
       <h2 className={`mb-1 ${less768px ? 'text-xl' : 'text-4xl'} text-center text-white`}>{description}</h2>
       <p className={`mb-2 ${less768px ? 'text-lg' : 'text-2xl'} text-center text-white`}>Ціна: <span className='text-yellow-300'>{price}</span> грн.</p>
-      <Image className='mx-auto mb-2' src={source} alt={description} width={less768px ? 280 : (bigger1280px ? 420 : 360)} height={less768px ? 280 : (bigger1280px ? 420 : 360)} />
+      <Image className='mx-auto mb-2' src={source} alt={description} width={less768px ? 280 : (bigger1280px ? 400 : 360)} height={less768px ? 280 : (bigger1280px ? 400 : 360)} />
       <Link href='/contacts' className='flex justify-center items-center max-w-[200px] p-2 mx-auto border text-2xl md:text-4xl text-white bg-slate-500 hover:bg-slate-400'>Замовити</Link>
       <Image className='absolute top-1 right-1 cursor-pointer' onClick={closeModal} src={cross} alt='Close Button' width={less768px ? 16 : 20} height={less768px ? 16 : 20} />
     </Modal>

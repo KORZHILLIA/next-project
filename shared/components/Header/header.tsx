@@ -29,13 +29,13 @@ export default function Header({ home }: { home?: boolean }) {
                 <ul className="flex items-center gap-6">
                     <li onClick={scrollToTop} className={navLiStyle}>
                     {less768px && <Image src={hero} alt="Знайди свій стиль!" width={24} height={24} />}
-                    <span className={`block ${!less768px && 'p-2'} md:shadow-sm md:hover:shadow-md transition-all text-xs md:text-xl`}>{less768px ? "Стиль" : 'Знайди свій стиль!'}</span>
+                    <span className={`block ${!less768px && 'p-2'} md:shadow-md md:hover:shadow-lg transition-all text-xs md:text-xl`}>{less768px ? "Стиль" : 'Знайди свій стиль!'}</span>
                     </li>
                     <li>
                 <RSLink to='popularGoods' offset={-60} smooth={true} duration={1700}>
                     <div className={navLiStyle}>
                         {less768px && <Image src={goods} alt="Наші найпопулярніші товари" width={24} height={24} />}
-                        <span className={`block ${!less768px && 'p-2'} md:shadow-sm md:hover:shadow-md transition-all text-xs md:text-xl`}>{less768px ? "Товари" : "Найпопулярніші товари"}</span>
+                        <span className={`block ${!less768px && 'p-2'} md:shadow-md md:hover:shadow-lg transition-all text-xs md:text-xl`}>{less768px ? "Товари" : "Найпопулярніші товари"}</span>
                     </div>
                         </RSLink>
                         </li>
