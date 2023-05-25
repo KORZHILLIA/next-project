@@ -5,8 +5,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import ContactForm from '@/components/ContactForm/contactForm';
 import Header from '@/shared/components/Header/header';
+import ContactForm from '@/components/ContactForm/contactForm';
+import Footer from '@/shared/components/Footer/footer';
 
 import { ThemeContext } from '@/context/themeContext';
 import { ThemeContextType } from '@/context/themeContext.type';
@@ -28,9 +29,9 @@ export default function Contacts() {
                 <meta name="description" content="Сайт, присвячений спортивним товарам" />
             </Head>
             <Header />
-            <main className={`${isDark ? 'text-white bg-slate-600' : 'text-black bg-slate-300'} h-screen`}>
+            <main className={`${isDark ? 'text-white bg-slate-600' : 'text-black bg-slate-300'}`}>
                 <div className="container mx-auto px-4 lg:px-32">
-                    <section className='pt-20 pb-2'>
+                    <section className='pt-20 pb-48'>
                         <div className='mb-2 flex justify-between'>
                             <Link href="/" className={`max-w-[160px] p-1 border-2 border-${isDark ? 'zinc-300' : 'zinc-600'} rounded-md flex justify-center items-center gap-1 ${isDark ? 'hover:bg-slate-500' : 'hover:bg-slate-200'} transition-all`}>
                                 <Image className={`${isDark && 'filter: invert'}`} src={arrowLeft} alt="Arrow left" width={less768px ? 16 : 20} height={less768px ? 16 : 20} />
@@ -41,7 +42,8 @@ export default function Contacts() {
                         <ContactForm />
                     </section>
                 </div>
-                <ToastContainer autoClose={2000 } />
+                <ToastContainer theme={`${isDark ? 'dark' : 'light'}`} autoClose={2000 } />
             </main>
+            <Footer />
         </>);
 };

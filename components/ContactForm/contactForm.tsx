@@ -17,7 +17,7 @@ import { labelStyle, inputStyle, errorStyle, errorCheckboxStyle, buttonStyle } f
 export default function ContactForm() {
     const { isDark } = useContext(ThemeContext) as ThemeContextType;
 
-    const notify = (name: string) => {toast.success(`Дякуємо, ${name}, ваші данні прийняті!`, { position: toast.POSITION.TOP_CENTER })};
+    const notify = (name: string) => {toast.success(`Дякуємо, ${name}, ваші данні прийняті!`, { position: toast.POSITION.TOP_CENTER,})};
 
     const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm<Inputs>({ defaultValues: { isAgree: false }, mode: 'onBlur' });
 
@@ -44,7 +44,7 @@ export default function ContactForm() {
                                     }
                                 }}
                                     errors={errors}
-                                    placeholder="Введіть ваше ім'я"
+                                    placeholder="Максимум 20 символів"
                                     inputStyles={`${inputStyle} ${isDark ? 'bg-slate-400' : 'bg-slate-200'}`}
                                     errorStyles={`${errorStyle} ${isDark && 'text-yellow-300'}`}
                                     errorMessage={errors.name?.message}

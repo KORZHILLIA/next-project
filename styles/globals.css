@@ -20,3 +20,19 @@ body {
   color: rgb(var(--foreground-rgb));
   background-repeat: repeat;
 }
+
+.Toastify__toast-theme--light {
+  background-color: rgb(203, 213, 235) !important;
+}
+
+.Toastify__toast-theme--dark {
+  background-color: rgb(100, 116, 139) !important;
+}
+
+.Toastify__progress-bar-theme--light {
+  background-color: rgb(100, 116, 139) !important;
+}
+
+.Toastify__progress-bar-theme--dark {
+  background-color: rgb(203, 213, 235) !important;
+}
